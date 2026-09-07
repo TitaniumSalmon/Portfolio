@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    @apply bg-primaryBackground;
+    @apply text-primaryBase;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@keyframes profile-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-image {
+  animation: profile-reveal 700ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-image {
+    animation: none;
+  }
+}
