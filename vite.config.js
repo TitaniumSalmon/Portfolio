@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vite_700/',
+  base: '/Portfolio/',
   plugins: [react()],
   port: 5500,
 })
